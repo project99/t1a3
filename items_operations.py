@@ -47,7 +47,7 @@ def remove_med(og_pt_list, lu_pt):
     for pt in og_pt_list:
         if pt ["name"] == lu_pt:
             del_med = input("enter position of med you would like to remove: ")
-            del pt["character"][del_med]
+            del pt["character"][int(del_med)-1]
             print("deletion successful")
 
         print("")
