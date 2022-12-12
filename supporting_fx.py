@@ -5,7 +5,6 @@ def master_list():
     role_call = [pt1, pt2, pt3]
     return role_call
 
-
 def print_maste_list(pt_list):
     for pt in pt_list:
         print(pt)
@@ -28,11 +27,11 @@ def remove_pt(pt_list, del_name):
             print(f"{del_name} was removed from the patient list")
         print("")   
 
-def add_meds(pt_list, name):
+def add_med(pt_list, name):
     for pt in pt_list:
         if pt["name"] == name:
             new_med = input("What would you like to add: ")
-            pt["character"].append(new_med)
+            pt["meds"].append(new_med)
             print(f"{new_med} was addeded")
         print("")   
 
@@ -40,6 +39,6 @@ def remove_med(pt_list, lu_pt):
     for pt in pt_list:
         if pt ["name"] == lu_pt:
             del_med = input("enter position of med you would like to remove: ")
-            del pt["character"][int(del_med)-1]
+            del pt["meds"][int(del_med)-1]
             print("deletion successful")
         print("")
