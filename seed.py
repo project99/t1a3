@@ -1,9 +1,9 @@
 
 # seed the list of productss put of the main file
 def seed():
-    coffee1 = {"name": "Latte", "price": 4.5}
-    coffee2 = {"name": "Capuccino", "price": 5.0}
-    coffee3 = {"name": "Espresso", "price": 3.5}
-    coffee4 = {"name": "Flat White", "price": 4.5}
+    coffee1 = {"name": "Latte", "character": ["smooth", "dark"]}
+    coffee2 = {"name": "Capuccino", "character": ["vanilla", "peach", "apricot"]}
+    coffee3 = {"name": "Espresso", "character": ["creamy", "smooth"]}
+    coffee4 = {"name": "Flat White", "character": ["spicy", "punchy", "special"]}
     products = [coffee1, coffee2, coffee3, coffee4]
     return products
