@@ -28,7 +28,7 @@ def update_item_price(items, name):
             # ask for the new price
             new_med = input("What would you like to add: ")
             #update the item's price
-            item["character"].extend(new_med)
+            item["character"].append(new_med)
             print(f"{new_med} was addeded")
 
         print(f"{name} is not in the menu")   
