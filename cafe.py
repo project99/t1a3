@@ -1,6 +1,6 @@
 from os import system
 from seed import seed
-from items_operations import print_list_of_items, add_item, delete_item, update_item_price
+from items_operations import print_list_of_items, print_pt_meds, add_item, delete_item, update_item_price
 
 #gets the list of products from the seed method, imported from seed.py
 list_of_products = seed()
@@ -12,9 +12,15 @@ def print_options():
     print("3. Edit price of a product from the menu")
     print("4. Delete a product from the menu")
     print("5. Take an order")
-    print("6. Exit")
-    opt = input("Select your option (1-6): ")
+    print("6. Print med list")
+    print("7. Exit")
+    opt = input("Select your option (1-7): ")
     return opt
+
+def print_med_list():
+    lu_pt = input ("Which medlist would you like? ")
+    print_pt_meds(list_of_products, lu_pt)
+
 
 
 def add_product():
@@ -24,7 +30,6 @@ def add_product():
 
     add_item(list_of_products, add_name, add_price)
     print(f"{add_name} being added to the menu...")
-    
 
 
 def delete_product():
@@ -55,7 +60,7 @@ option = ""
 # Menu feature: The while loop prints the menu option and the user select the option.
 # Each valid option invokes the selected function
 # The loop only stops when the input is 6 (exit option)
-while option != "6":
+while option != "7":
     system('clear')
     # invoke print options and return the selected option
     option = print_options()
@@ -75,8 +80,10 @@ while option != "6":
     elif option == "5":
         print("Takes an order")
         take_order()
-    #manages the exit option and the invalid options
     elif option == "6":
+        print_med_list()
+    #manages the exit option and the invalid options
+    elif option == "7":
         continue
     else:
         print("Invalid option")

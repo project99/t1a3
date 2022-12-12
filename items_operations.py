@@ -3,6 +3,17 @@ def print_list_of_items(items):
     for item in items:
         print(item)
 
+
+def print_pt_meds(pt_list, name):
+    for pt in pt_list:
+        if pt["name"] == name:
+            print(pt.get("character"))
+            print("med list printed successfully")
+
+        print("")
+
+
+
 # adds a new item to the menu
 def add_item(oga_items, add_name, add_price):
 
@@ -32,3 +43,5 @@ def update_item_price(items, name):
             print(f"{new_med} was addeded")
 
         print(f"{name} is not in the menu")   
+
+
