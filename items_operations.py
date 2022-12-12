@@ -26,9 +26,9 @@ def update_item_price(items, name):
         # check if the item's name of this iteration is equal to the name we receive.
         if item["name"] == name:
             # ask for the new price
-            price = input(f"What is the new price for {name}? ")
+            new_med = input("What would you like to add: ")
             #update the item's price
-            item["price"] = price
-            print(f"{name}'s price was uptaded in the menu")
+            item["character"].extend(new_med)
+            print(f"{new_med} was addeded")
 
         print(f"{name} is not in the menu")   
