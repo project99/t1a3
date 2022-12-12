@@ -4,21 +4,21 @@ def print_list_of_items(items):
         print(item)
 
 # adds a new item to the menu
-def add_item(items, name, price):
+def add_item(oga_items, add_name, add_price):
 
-    new_item = {"name": name, "price": price}
-    items.append(new_item)
+    new_item = {"name": add_name, "price": add_price}
+    oga_items.append(new_item)
 
-def delete_item(items, name):
+def delete_item(ogd_items, del_name):
     # iterate through the list looking for the item
-    for item in items:
+    for lu_item in ogd_items:
         # check if the item's name of this iteration is equal to the name we receive.
-        if item["name"] == name:
+        if lu_item["name"] == del_name:
             # access to the list and remove the item
-            items.remove(item)
-            print(f"{name} was removed from the menu")
-            
-        print(f"{name} is not in the menu")   
+            ogd_items.remove(lu_item)
+            print(f"{del_name} was removed from the menu")
+
+        print("")   
 
 def update_item_price(items, name):
     # iterate through the list looking for the item

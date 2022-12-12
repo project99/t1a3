@@ -19,11 +19,11 @@ def print_options():
 
 def add_product():
     # asks for name and
-    name = input("What's the name of the new product? ")
-    price = float(input (f"What's the price of {name}? "))
+    add_name = input("What's the name of the new product? ")
+    add_price = float(input (f"What's the price of {add_name}? "))
 
-    add_item(list_of_products, name, price)
-    print(f"{name} being added to the menu...")
+    add_item(list_of_products, add_name, add_price)
+    print(f"{add_name} being added to the menu...")
     
 
 
