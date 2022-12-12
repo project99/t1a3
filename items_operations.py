@@ -13,7 +13,6 @@ def print_pt_meds(pt_list, name):
         print("")
 
 
-
 # adds a new item to the menu
 def add_item(oga_items, add_name, add_price):
 
@@ -44,4 +43,11 @@ def update_item_price(items, name):
 
         print(f"{name} is not in the menu")   
 
+def remove_med(og_pt_list, lu_pt):
+    for pt in og_pt_list:
+        if pt ["name"] == lu_pt:
+            del_med = input("enter position of med you would like to remove: ")
+            del pt["character"][del_med]
+            print("deletion successful")
 
+        print("")
