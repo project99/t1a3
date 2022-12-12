@@ -5,7 +5,7 @@ def master_list():
     role_call = [pt1, pt2, pt3]
     return role_call
 
-def print_maste_list(pt_list):
+def print_master_list(pt_list):
     for pt in pt_list:
         print(pt)
 

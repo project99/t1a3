@@ -1,7 +1,7 @@
 from os import system
 from supporting_fx import master_list, print_master_list, print_pt_meds, add_pt, remove_pt, add_med, remove_med
 
-og_list = master_list
+og_list = master_list()
 
 def print_options():
     print("1. Show list of patients and their meds")
@@ -21,7 +21,7 @@ def print_pt_meds_fx():
 
 def add_pt_fx():
     add_name = input("What's the name of the patient you would like to add? ")
-    add_meds = list(input ("Meds would you like to add: ").split())
+    add_meds = list(input ("Type in the med you would like to add, each item separated by space: ").split())
 
     add_pt(og_list, add_name, add_meds)
     print(f"{add_name} has been added to the patient list")
@@ -52,7 +52,7 @@ while option != "0":
     system('clear')
     if option == "1":
         print("Here is a list of patients and their meds")
-        print_pt_meds_fx(og_list)
+        print_master_list(og_list)
     elif option == "2":
         print("Here is the meds of a specific patient")
         print_pt_meds_fx()
